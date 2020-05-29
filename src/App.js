@@ -6,7 +6,7 @@ import Details from './components/Details';
 
 const App = () => {
   return (
-    <div>
+    <div className="mainContainer">
       <Logo />
       <Showcase />
       <Details />

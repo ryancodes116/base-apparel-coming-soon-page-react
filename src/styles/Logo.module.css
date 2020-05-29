@@ -1,4 +1,12 @@
 .logo {
   padding: 2rem 0;
   background-color: #fff;
+  width: 100%;
+}
+
+/* Media Queries */
+@media (min-width: 1000px) {
+  .logo {
+    display: none;
+  }
 }

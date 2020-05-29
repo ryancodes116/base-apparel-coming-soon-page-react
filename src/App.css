@@ -9,12 +9,6 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
 p {
@@ -25,7 +19,24 @@ img {
   max-width: 100%;
 }
 
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
 .container {
   width: 80%;
+  max-width: 517px;
   margin: 0 auto;
+}
+
+/* Media Queries */
+@media (min-width: 1000px) {
+  .mainContainer {
+    flex-direction: row-reverse;
+  }
 }

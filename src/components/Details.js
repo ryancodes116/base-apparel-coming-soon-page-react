@@ -4,6 +4,7 @@ import styles from '../styles/Details.module.css';
 
 import arrow from '../images/icon-arrow.svg';
 import errorIcon from '../images/icon-error.svg';
+import logo from '../images/logo.svg';
 
 const Details = () => {
   const [customStyles, setCustomStyles] = useState({
@@ -20,7 +21,7 @@ const Details = () => {
   };
 
   const validEmail = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return re.test(email.trim());
   };
@@ -33,6 +34,7 @@ const Details = () => {
         errorIconDisplay: 'none',
         borderColor: 'hsl(0, 36%, 70%)',
       });
+      setEmail('');
     } else {
       setCustomStyles({
         errorDisplay: 'block',
@@ -44,6 +46,7 @@ const Details = () => {
 
   return (
     <div className={classNames('container', styles.details)}>
+      <img src={logo} alt="Base Apparel logo" className={styles.logo} />
       <h1 className={styles.title}>
         <span className={styles.firstWord}>We're </span>Coming Soon
       </h1>
@@ -52,17 +55,20 @@ const Details = () => {
         Add your email below to stay up-to-date with announcements and our
         launch deals.
       </p>
-      <form className={classNames('container', styles.form)}>
+      <form
+        className={classNames('container', styles.form)}
+        onSubmit={handleSubmit}
+      >
         <input
           className={styles.input}
           style={{ borderColor: customStyles.borderColor }}
-          type="email"
+          type="text"
           placeholder="Email Address"
           value={email}
           onChange={handleChange}
         />
         <a className={styles.arrow} onClick={handleSubmit}>
-          <img src={arrow} />
+          <img src={arrow} alt="submit button" />
         </a>
         <img
           src={errorIcon}
