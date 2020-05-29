@@ -38,7 +38,7 @@
   font-weight: 600;
   color: hsl(0, 36%, 70%);
   background-color: inherit;
-  border: 1px solid hsl(0, 36%, 70%);
+  border: 1px solid;
   border-radius: 2rem;
 }
 
@@ -51,4 +51,18 @@
   padding: 1rem 0 0.6rem 0;
   border-radius: 2rem;
   width: 20%;
+}
+
+.errorIcon {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+}
+
+.errorMessage {
+  color: hsl(0, 93%, 68%);
+  font-weight: 400;
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-left: 6%;
 }
