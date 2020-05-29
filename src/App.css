@@ -14,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
 p {
@@ -22,4 +23,9 @@ p {
 
 img {
   max-width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
 }

@@ -1,0 +1,26 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  line-height: 1.1;
+}
+
+.firstWord {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.text {
+  color: hsl(0, 36%, 70%);
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}

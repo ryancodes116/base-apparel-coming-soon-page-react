@@ -1,9 +1,17 @@
 import React from 'react';
+import './App.css';
+import Logo from './components/Logo';
+import Showcase from './components/Showcase';
+import Details from './components/Details';
 
-export const App = () => {
+const App = () => {
   return (
     <div>
-      <h1>Hello React!</h1>
+      <Logo />
+      <Showcase />
+      <Details />
     </div>
   );
 };
+
+export default App;
